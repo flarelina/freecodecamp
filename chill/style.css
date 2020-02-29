@@ -3,14 +3,18 @@ h4 {
   background-color: rgba(45, 45, 45, 0.1);
   padding: 10px;
   font-size: 27px;
-}
+  text-transform: uppercase; /*lowercase, capitalize, initial ... etc*/
+}   
 p {
   text-align: justify;
+  line-height: 25px;
 }
 .links {
   text-align: left;
   color: black;
-
+}
+.links:hover { /**so cool the hover here guys */
+  color: red;
 }
 #thumbnail {
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -21,10 +25,30 @@ p {
   border-radius: 5px;
   margin: 10px 5px;
   padding: 4px;
+  position: absolute; /*relative, fixed , sticky*/
+  top: 100px;
+  left: 100px;
+  background-color: white;
 }
 .cardContent {
   padding: 10px;
 }
 .cardText {
   margin-bottom: 30px;
+}
+
+.options {  
+  width: 100px;
+  height: 50px;
+  background: linear-gradient(30deg, red, yellow, rgb(204, 204, 255));
+}
+
+.options:hover {
+  transform: scale(2); /*other functions are interesting too tho*/
+}
+
+/*Hey hr now is -20px away from its box*/
+hr {
+  position: relative; /*or absolute*/
+  top: -20px; 
 }
