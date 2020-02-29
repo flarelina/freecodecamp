@@ -66,3 +66,76 @@ hr {
   border-radius: 50%;
   box-shadow: 25px 10px 0px 0px blue;
 }
+
+.moon:hover {
+  animation-name: bg-moon;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.heart {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: pink;
+  height: 50px;
+  width: 50px;
+  transform: rotate(-45deg);
+  animation-name: hearteu;
+  animation-duration: 5s;
+  z-index: 1;
+}
+.heart::after {
+  background-color: pink;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 25px;
+  animation-name: hearteu;
+  animation-duration: 5s;
+}
+.heart::before {
+  content: "";
+  background-color: pink;
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 0px;
+  animation-name: hearteu;
+  animation-duration: 5s;
+}
+
+@keyframes hearteu {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: orange;
+  }
+  75% {
+    background-color: peachpuff;
+  }
+  100% {
+    background-color: palevioletred;
+  }
+}
+
+@keyframes bg-moon {
+  0% {
+    background-color: pink;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
