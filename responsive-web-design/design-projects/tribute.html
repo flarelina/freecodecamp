@@ -10,64 +10,64 @@
     <style>
         #main {
             background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-            display: flex;
-            flex-direction: column;
             font-family: 'Source Sans Pro', sans-serif;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
         }
         #title {
-            display: flex;
-            justify-content: center;
+            text-align: center;
         }
         #img-div {
+            text-align: center;
+            padding: 20px;
         }
         #img-caption {
-            display: flex;
-            justify-content: center;
-
         }
         #image {
-            width: 50%;
+            max-width: 100%;
+            height: auto;
         }
-        #tribute-info {
-            display: flex;
-            justify-content: center;
-            width: 700px;
-            flex-wrap: wrap;
-
+        #image:hover {
+            transform: scale(1.1);
+        }
+        #section1 {
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div id="main">
-        <div id="title">
-            <h1>Free Code Camp</h1>
+        <div id="section1">
+            <div id="title">
+                <h1>Free Code Camp</h1>
+            </div>
+
+            <div id="img-div">
+                <img id="image" src="https://i1.wp.com/softwareengineeringdaily.com/wp-content/uploads/2019/12/freecodecamp-vector-logo.png?resize=730%2C389&ssl=1" alt="freeCodeCamp Logo">
+                <p id="img-caption"><i>One of the best interactive web development-related stuff tutorials.</i></p>
+            </div>
         </div>
 
-        <div id="img-div">
-            <img id="image" src="https://i1.wp.com/softwareengineeringdaily.com/wp-content/uploads/2019/12/freecodecamp-vector-logo.png?resize=730%2C389&ssl=1" alt="freeCodeCamp Logo">
-            <p id="img-caption"><i>One of the best interactive web development-related stuff tutorials.</i></p>
-        </div>
+        <div id="section2">
+            <div id="tribute-info">
+                <p>
+                    Free Code Camp makes it easier for aspiring web developers or beginners 
+                to get started learning stuff without having to experience information overload. 
+                <br/><br/>
+                The topics or subjects in each tutorial are well structured. It also offers interactive learning which
+                makes it easier and more fun to learn coding.
+                <br/><br/>
+                Even though I don't consider myself as a beginner since I already have a year of experience in web development,
+                I still find this site very useful in reviewing the fundamentals of web development, which even the most
+                experienced developer have missed to practice, since a vast of frameworks out there pop up to make 
+                web development easier. Even if that's the case, it's still better to master the basics before moving forward to
+                the more advance one. Without solid understanding to the basics it's almost impossible to understand advance topic.
+                <br/><br/>
+                For all beginners or aspiring developers out there, freeCodeCamp is the best place to start with. Give it a try by clicking link below.
+                </p>  
 
-        <div id="tribute-info">
-            <p>
-                Free Code Camp makes it easier for aspiring web developers or beginners 
-            to get started learning stuff without having to experience information overload. 
-            <br/><br/>
-            The topics or subjects in each tutorial are well structured. It also offers interactive learning which
-            makes it easier and more fun to learn coding.
-            <br/><br/>
-            Even though I don't consider myself as a beginner since I already have a year of experience in web development,
-            I still find this site very useful in reviewing the fundamentals of web development, which even the most
-            experienced developer have missed to practice, since a vast of frameworks out there pop up to make 
-            web development easier. Even if that's the case, it's still better to master the basics before moving forward to
-            the more advance one. Without solid understanding to the basics it's almost impossible to understand advance topic.
-            <br/><br/>
-            For all beginners or aspiring developers out there, freeCodeCamp is the best place to start with. Give it a try.
-            </p>  
-        </div>
-
-        <div>
-            <a id="tribute-link" href="http://freecodecamp.org/" target="_blank">freeCodeCamp</a>
+                <a id="tribute-link" href="http://freecodecamp.org/" target="_blank">freeCodeCamp</a>
+            </div>
         </div>
     </div>
 </body>
