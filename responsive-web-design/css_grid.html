@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID</title>
+
+    <!--
+        CSS Grid helps you easily build complex web designs. 
+        It works by turning an HTML element into a grid container 
+        with rows and columns for you to place children elements 
+        where you want within the grid.    
+
+        grid-gap: row column; shorthand
+
+        grid-template-areas:
+            "header header header"
+            "advert content content"
+            "footer footer footer";
+
+        you can use (.) to represent empty cell
+
+        grid-area: horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at;
+    
+        // amazing minmax, cant go smaller than min of course but im still amazed with this
+        grid-template-columns: repeat(3, minmax(10px, 100px));
+
+        another amazing feature is auto-fill for repeat instead of value, example grid-area: repeat(auto-fill, 100px)
+    --->
+
+    <style>
+        .d1{background:LightSkyBlue;}
+        .d2{
+            background:LightSalmon;
+            justify-self: center; /*end, start, center, default: stretch*/
+            align-self: end; /*while justify aligns horizontally align-self aligns vertically*/
+        }
+        .d3{background:PaleTurquoise;}
+        .d4{background:LightPink;}
+        .d5{
+            background:PaleGreen;
+            grid-area: footer; /*this is related to grid-area-template so basically d5 will occupy cells with footer name*/
+        }
+
+        .container {
+            font-size: 40px;
+            width: 100%;
+            background: LightGray;
+            display: grid;
+            /*grid-template-columns: 100px 100px 100px; 3 columns with 100px width each*/
+            grid-template-rows: 100px 100px; /*2 rows with 100px height or repeat(2, 100px)  */
+            grid-template-columns: auto 10% 1fr 100px;
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            grid-column: 2 / 4; /*consume other columns from 2nd vertical line to 4th vertical lines*/
+            grid-row: 2/ 4; /*consume other rows from 2nd horizontal line to 4th horizontal line*/
+            justify-items: stretch; /*justify all items or cell inside grid container*/
+            align-items: start; /*aligns all items*/
+            grid-template-areas:
+            "header header header"
+            "advert content content"
+            "footer footer footer";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="d1">1</div>
+        <div class="d2">2</div>
+        <div class="d3">3</div>
+        <div class="d4">4</div>
+        <div class="d5">5</div>
+    </div>    
+</body>
+</html>
