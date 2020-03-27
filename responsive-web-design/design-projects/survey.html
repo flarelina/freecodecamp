@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <style>
+        body {
+            background: rgb(237, 217, 228);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="title">Form</h1>
+        <p>This is a description</p>
+        <form action="" id="survey-form">
+            <label for="name" id="name-label">Name: </label>
+            <input type="text" id="name" name="name" placeholder="Please enter your name.">
+
+            <label for="email" id="email-label">Email: </label>
+            <input type="text" id="email" name="email" placeholder="Please enter your email.">
+
+            <label for="age" id="number-label">Age: </label>
+            <input type="number" id="number" name="age" placeholder="Please enter your age.">
+
+            <label for="age">Dropdown: </label>
+            <select name="" id="dropdown">
+                <option value="1">Test 1</option>
+                <option value="2">Test 2</option>
+            </select>
+
+            <fieldset>
+                <legend>Writing Level</legend>
+                <input type="radio" name="confidence" id="beginner" value="beginner">
+                <label for="beginner">Beginner</label>
+
+                <input type="radio" name="confidence" id="intermediate" value="intermediate">
+                <label for="intermediate">Intermediate</label>
+                
+                <input type="radio" name="confidence" id="master" value="master">
+                <label for="master">Master</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Writing Level</legend>
+                <input type="checkbox" name="confidence" id="beginner" value="beginner">
+                <label for="beginner">Beginner</label>
+
+                <input type="checkbox" name="confidence" id="intermediate" value="intermediate">
+                <label for="intermediate">Intermediate</label>
+                
+                <input type="checkbox" name="confidence" id="master" value="master">
+                <label for="master">Master</label>
+            </fieldset>
+
+            <textarea name="" id="" cols="30" rows="10" placeholder="Please comment."></textarea>
+
+            <button id="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
