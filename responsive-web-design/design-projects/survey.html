@@ -4,60 +4,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap" rel="stylesheet">
+
     <style>
         body {
             background: rgb(237, 217, 228);
+            font-family: 'Baloo Thambi 2', cursive;
+            color: grey;
+        }
+        #container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        #form-section {
+            background-color: rgb(255, 252, 255);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 1px 0px 26px 3px rgba(0,0,0,0.4);
+        }
+        #title {
+            background-color: teal;
+            text-align: center;
+            color: white;
+            background: linear-gradient(90deg, rgba(180,169,251,1) 10%, rgba(238,174,202,1) 95%);
+            height: 100px;
+            margin: -20px;
+            border-radius: 20px 20px 0px 0px;
+            padding-top: 50px;
+        }
+        #description {
+            text-align: center;
+            padding-top: 20px;
+        }
+        #survey-form {
+            display: flex;
+            flex-direction: column;
+            column-gap: 10px;
+        }
+        #submit {
+            background: linear-gradient(90deg, rgba(180,169,251,1) 10%, rgba(238,174,202,1) 95%);
+            border: none;
+            margin-top: 20px;
+            border-radius: 20px;   
+            padding: 5px;
+            color: white;
+            text-transform: uppercase;
+        }
+        #submit:hover {
+            cursor: pointer;
+            box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+
+        }
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        .group-input-container {
+            padding-top: 10px;
+            display: relative;
+        }
+        .group-input-container input{
+           height: 12px;
+        }
+        .group-input-container label{
+           font-size: 14;
+        }
+        select,
+        input {
+            height: 30px;
+            border-radius: 2px;
+            border: none;
+            background-color: transparent;
+            border-bottom: 2px solid rgb(230, 230, 230);
+            color: grey;
+            font-size: 14px;
+            padding: 2px 0px;
+        }
+        label {
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        textarea {
+            border: none;
+            border-bottom: 2px solid rgb(230, 230, 230);
+            background-color: transparent;
+        }
+        fieldset {
+            border: 2px solid rgb(230, 230, 230);
         }
     </style>
 </head>
 <body>
-    <div>
-        <h1 id="title">Form</h1>
-        <p>This is a description</p>
-        <form action="" id="survey-form">
-            <label for="name" id="name-label">Name: </label>
-            <input type="text" id="name" name="name" placeholder="Please enter your name.">
+    <div id="container">
+        <div id="form-section">
+            <h1 id="title">Programmer Survey Form</h1>
+            <p id="description">Kindly fill up the form to proceed with the coding game.</p>
+            <form action="" id="survey-form">
+                <div class="input-container">
+                    <label for="name" id="name-label">Name: </label>
+                    <input type="text" id="name" name="name" placeholder="Please enter your name.">
+                </div>
+    
+                <div class="input-container">
+                    <label for="email" id="email-label">Email: </label>
+                    <input type="text" id="email" name="email" placeholder="Please enter your email.">
+                </div>   
 
-            <label for="email" id="email-label">Email: </label>
-            <input type="text" id="email" name="email" placeholder="Please enter your email.">
+                <div class="input-container">
+                    <label for="age" id="number-label">Age: </label>
+                    <input type="number" id="number" name="age" placeholder="Please enter your age.">
+                </div>
 
-            <label for="age" id="number-label">Age: </label>
-            <input type="number" id="number" name="age" placeholder="Please enter your age.">
+                <div class="input-container">
+                    <label for="age">Dropdown: </label>
+                    <select name="" id="dropdown">
+                        <option value="1">Test 1</option>
+                        <option value="2">Test 2</option>
+                    </select>
+                </div>
+    
+                <div class="input-container">
+                    <fieldset>
+                        <legend>Gender</legend>
 
-            <label for="age">Dropdown: </label>
-            <select name="" id="dropdown">
-                <option value="1">Test 1</option>
-                <option value="2">Test 2</option>
-            </select>
+                        <div class="group-input-container">
+                            <input type="radio" name="gender" id="male" value="male">
+                            <label for="beginner">Male</label>
+                        </div>
+            
+                        <div class="group-input-container">
+                            <input type="radio" name="gender" id="female" value="female">
+                            <label for="intermediate">Female</label>
+                        </div>
+                    </fieldset>
+                </div>
+    
+                <div class="input-container">
+                    <fieldset>
+                        <legend>Programming Languages</legend>
 
-            <fieldset>
-                <legend>Writing Level</legend>
-                <input type="radio" name="confidence" id="beginner" value="beginner">
-                <label for="beginner">Beginner</label>
+                        <div class="group-input-container">
+                            <input type="checkbox" name="confidence" id="beginner" value="beginner">
+                            <label for="beginner">Python</label>
+                        </div>
+        
+                        <div class="group-input-container">
+                            <input type="checkbox" name="confidence" id="intermediate" value="intermediate">
+                            <label for="intermediate">Java</label>
+                        </div>
+                        
+                        <div class="group-input-container">
+                            <input type="checkbox" name="confidence" id="master" value="master">
+                            <label for="master">JavaScript</label>
+                        </div>
 
-                <input type="radio" name="confidence" id="intermediate" value="intermediate">
-                <label for="intermediate">Intermediate</label>
-                
-                <input type="radio" name="confidence" id="master" value="master">
-                <label for="master">Master</label>
-            </fieldset>
+                        <div class="group-input-container">
+                            <input type="checkbox" name="confidence" id="master" value="master">
+                            <label for="master">Swift</label>
+                        </div>
 
-            <fieldset>
-                <legend>Writing Level</legend>
-                <input type="checkbox" name="confidence" id="beginner" value="beginner">
-                <label for="beginner">Beginner</label>
+                        <div class="group-input-container">
+                            <input type="checkbox" name="confidence" id="master" value="master">
+                            <label for="master">C#</label>
+                        </div>
+                        
+                        <div class="group-input-container">
+                            <input type="checkbox" name="confidence" id="master" value="master">
+                            <label for="master">Ruby</label>
+                        </div>
+                    </fieldset>
+                </div>  
+    
+                <div class="input-container">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Please comment."></textarea>
+                </div>
 
-                <input type="checkbox" name="confidence" id="intermediate" value="intermediate">
-                <label for="intermediate">Intermediate</label>
-                
-                <input type="checkbox" name="confidence" id="master" value="master">
-                <label for="master">Master</label>
-            </fieldset>
-
-            <textarea name="" id="" cols="30" rows="10" placeholder="Please comment."></textarea>
-
-            <button id="submit">Submit</button>
-        </form>
+                <button id="submit">Submit</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
