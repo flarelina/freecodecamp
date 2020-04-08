@@ -1,101 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Landing Page</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&display=swap" rel="stylesheet">
+
+
     <style>
         body {
+            margin: -25px 0px;
+            font-family: 'Baloo Paaji 2', cursive;
+        }
+        header {    
+            background: linear-gradient(90deg, rgba(186,123,255,1) 0%, rgba(123,0,255,1) 95%);
+            position: relative;
+            height: 120px;
+        }
+        #header-img {
+            position: absolute;
+            width: 200px;
+            top: 45px;
+            left: 100px;
+        }
+        #nav-bar {
+            position: absolute;
+            top: 40px;
+            right: 100px;
+        }
+        #nav-bar ul li {
+            text-decoration: none;
+            display: inline;
+            margin: 20px;
             color: white;
         }
-        header {
-            background-color: #19283f;
-            height: 100px;
-            position: fixed;
-            width: 100%;
-            z-index: 1;
-        }   
-        #nav {
-            position: relative;
-            background-color: grey;
-            width: 200px;
+        #nav-bar ul li:hover {
+            cursor: pointer;
         }
-        #banner {
-            position: relative;
-            top:100px;
-            background-color: #19283f;
-            height: 300px;
+
+
+        /*Media*/
+        @media(max-width: 845px) {
+            #nav-bar {
+                padding: 5px 0px;
+                position: absolute;
+                top: 100px;
+                left: 0px;
+                right: 0px;
+            }
+            #nav-bar ul {
+                padding-top: 2px;
+                height: 170px;
+                background: linear-gradient(90deg, rgba(186,123,255,1) 0%, rgba(123,0,255,1) 95%);
+            }
+            #nav-bar ul li {
+                text-decoration: none;
+                display: block;
+                color: white;
+            }
         }
     </style>
 </head>
 <body>
     <header id="header">
-        <img id="header-img" src="" alt="">
-        <nav id="nav">
-            <a class="nav-link">Nav 1</a>
-            <a class="nav-link">Nav 2</a>
-            <a class="nav-link">Nav 3</a>
+        <img src="s3logo.png" alt="logo" id="header-img">
+
+        </img>
+
+        <nav id="nav-bar">
+            <ul>
+                <li class="nav-link">
+                    Features
+                </li>
+                <li class="nav-link">
+                    Packages
+                </li>
+                <li class="nav-link">
+                    Contact Us
+                </li>
+            </ul>
         </nav>
     </header>
-
-    <div id="banner">
-
-    </div>
-
-    <section>
-        <div id="video"></div>
-
-        <form id="form">
-            <input type="email" name="email" id="email" placeholder="Please enter your email." required>
-            <input type="button" id="submit">
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            <p>12</p>
-            
-        </form> 
-    </section>
 </body>
 </html>
