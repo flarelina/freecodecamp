@@ -12,11 +12,14 @@
         body {
             margin: -25px 0px;
             font-family: 'Baloo Paaji 2', cursive;
+            position: relative;
         }
         header {    
             background: linear-gradient(90deg, rgba(186,123,255,1) 0%, rgba(123,0,255,1) 95%);
-            position: relative;
+            position: fixed;
             height: 120px;
+            z-index: 1;
+            width: 100%;
         }
         #header-img {
             position: absolute;
@@ -38,7 +41,18 @@
         #nav-bar ul li:hover {
             cursor: pointer;
         }
-
+        #features {
+            padding-top: 150px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 10px;
+        }
+        .features-section {
+            padding: 20px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+        }
 
         /*Media*/
         @media(max-width: 845px) {
@@ -59,28 +73,164 @@
                 display: block;
                 color: white;
             }
+            #features {
+                padding-top: 300px;
+            }
+        }
+        h3,
+        h2,
+        h1{
+            color: rgba(123,0,255,1);
+            margin: 0px;
+        }
+
+        #packages {
+            padding-top: 20px;
+            text-align: center;
+        }
+        #packages-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            padding: 30px 30px 20px 30px;
+            align-items: center;
+            grid-gap: 20px;
+            justify-items: center;
+            backround-sh
+        }
+        #packages-item {
+            height: 300px;
+            width: 300px;
+            padding: 10px;
+            border-radius: 20px;
+            border: 2px solid rgba(186,123,255,0.1)
+        }
+        #packages-item:hover {
+            border: 2px solid rgba(186,123,255,0.7  );
+            box-shadow: 0px 0px 37px -30px rgba(0,0,0,0.90);
+            cursor: pointer;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #subscribe {
+            padding-top: 50px;
+            text-align: center;
+            height: 300px;
+        }
+
+        input {
+            height: 50px;
+            font-size: 24px;
+            width: 100%;
+            max-width: 700px;
+            border: 1px solid rgba(186,123,255,0.5);
+            padding: 0px 5px;
+            color: rgba(123,0,255,1);
+        }
+        input:focus {
+            border: 1px solid rgba(186,123,255,1);
+        }
+        #submit {
+            margin-top: 5px;
+            width:  150px;
+            background-color: rgba(123,0,255,1); 
+            color: white;
+        }
+        footer {
+            color: white;
+            text-align: center;
+            background: linear-gradient(90deg, rgba(186,123,255,0.3) 0%, rgba(123,0,255,0.7) 95%);
+        }
+        .description {
+            padding: 10px 0px;
         }
     </style>
 </head>
 <body>
     <header id="header">
-        <img src="s3logo.png" alt="logo" id="header-img">
-
-        </img>
+        <img src="s3logo.png" alt="logo" id="header-img"> </img>
 
         <nav id="nav-bar">
             <ul>
                 <li class="nav-link">
-                    Features
+                    <a href="#features">Features</a>
                 </li>
                 <li class="nav-link">
-                    Packages
+                    <a href="#packages">Packages</a>
                 </li>
                 <li class="nav-link">
-                    Contact Us
+                    <a href="#subscribe">Subscribe</a>
                 </li>
             </ul>
         </nav>
     </header>
+
+    <main>
+        <div id="features">
+            <div class="features-section">
+                <iframe id="video"
+                        height="100%"
+                        width="100%"
+                        src="https://www.youtube.com/embed/36pt6qpLNSE?rel=0&amp;controls=0&amp;showinfo=0"
+                        frameborder="0"
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <div class="features-section">
+                <h2>Surprising</h2>
+                <p>You'll get excited to receive love letters everyday because you have no idea what words you will be getting.</p>
+
+                <h2>State Changing</h2>
+                <p>Once you read the message, how you represent things to yourself will change instantaneously and your current state will switch from paralyzing to enabling.</p>                
+            </div>
+        </div>
+
+        <div id="packages">
+            <h1>Packages</h1>
+
+            <div id="packages-list">
+                <div id="packages-item">
+                    <h2>Basic</h2>
+                    <div class="description">1 Love Letter per Day</div>
+                    <div class="description">20 words</div>
+                    <div class="description">70% Success Rate</div>
+                    <div class="description">Free Smile</div>
+                </div>
+
+                <div id="packages-item">
+                    <h2>Ultimate</h2>
+                    <div class="description">1 Love Letter per Day</div>
+                    <div class="description">40 words</div>
+                    <div class="description">80% Success Rate</div>
+                    <div class="description">Free Hugs</div>
+                </div>
+
+                <div id="packages-item">
+                    <h2>Premium</h2>
+                    <div class="description">2 Love Letter per Day</div>
+                    <div class="description">20 words</div>
+                    <div class="description">100% Success Rate</div>
+                    <div class="description">Free Kisses</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="subscribe">
+
+            <h1>Please enter your email to subscribe</h1>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <p>
+                    <input id="email" type="email" name="email" placeholder="Please enter your email address.">
+                </p>
+                <input type="submit" id="submit" name="" value="Subscribe">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        Developed with ❤ by <a href="">Flarelina</a> 
+    </footer>
 </body>
 </html>
